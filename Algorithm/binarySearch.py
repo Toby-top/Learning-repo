@@ -16,7 +16,7 @@ if Array[0] < Array[1]:
     Min = Array[0]
 
 # Iteration/ Main body binary search
-for i in range(2, length - 1, 2):
+for i in range(2, length - 1, 2): # Iterate two by two
     n+=1
     if Array[i] > Array[i+1]:
         if Array[i]>Max:

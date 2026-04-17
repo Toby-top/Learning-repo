@@ -2,7 +2,7 @@ import random
 
 # declare array
 RandomNumber = [0] * 100000
-CountedNumber = [[0] for _ in range(100000)]
+CountedNumber = [[0 for _ in range(2)] for _ in range(100000)]
 
 # generate random integers
 for i in range(100000):
@@ -24,6 +24,12 @@ for Value in range(10):
 for i in range(10):
     for j in range(10 - 1 - i):
         if CountedNumber[j][1] < CountedNumber[j + 1][1]:
-            Temp = CountedNumber[j][1]
-            CountedNumber[j][1] = CountedNumber[j + 1][1]
-            CountedNumber[j + 1][1] = Temp
+            Temp = CountedNumber[j]
+            CountedNumber[j] = CountedNumber[j + 1]
+            CountedNumber[j + 1] = Temp
+
+# output values along with their chance
+for i in range(10):
+    Chance = CountedNumber[i][1] / 100000
+    Chance = round(Chance, 4)
+    print("Number:", CountedNumber[i][0], "with chance:", Chance)

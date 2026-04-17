@@ -1,8 +1,8 @@
 import random
 from time import time
 start_time = time()
-length = 6767 # Length of the array, which can be changed
-Array = [random.randint(0,6767) for _ in range(length)] # Create an array
+length = 100000 # Length of the array, which can be changed
+Array = [random.randint(0,63333333333333333) for _ in range(length)] # Create an array
 n = 1
 MaxGroup = ["" for _ in range(10)]
 MinGroup = ["" for _ in range(10)]

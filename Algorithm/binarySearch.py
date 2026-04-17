@@ -17,6 +17,7 @@ if Array[0] < Array[1]:
 
 # Iteration/ Main body binary search
 for i in range(2, length - 1, 2): 
+for i in range(2, length - 1, 2): 
     if Array[i] > Array[i+1]:
         if Array[i]>Max:
             Max = Array[i]
@@ -35,4 +36,5 @@ print(Array)
 print(Min)
 print(Max)
 print(n)
-print(f"{time() - start_time:.4f} seconds") # Measuring the program's running time
+end_time = time()
+print(f"{end_time - start_time:.4f} seconds") # Measuring the program's running time

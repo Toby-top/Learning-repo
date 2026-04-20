@@ -8,7 +8,7 @@ CountedNumber = [[0 for _ in range(2)] for _ in range(100000)]
 
 # generate random integers
 for i in range(100000):
-    RandomNumber[i] = random.randint(1, 10)
+    RandomNumber[i] = random.randint(0, 10)
 
 # count the frequency
 def Count(Value):

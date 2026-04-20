@@ -1,3 +1,5 @@
+# Generate 100,000 random integers between 1 and 10, count the frequency of each integer, sort them in descending order based on their frequency, and output the integers along with their chances of occurrence.
+
 import random
 
 # declare array

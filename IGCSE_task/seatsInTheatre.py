@@ -27,4 +27,19 @@ if Require < Remaining:
         print("House full")
     else:
         print("Seats left:", Remaining)
-#else:
+else:
+    Available_row, Row_remaining = divmod(Booked, 20)
+    if Require <= Row_remaining:
+        for row in Evening:
+            for seat in row:
+                if seat == False:
+                    seat = True
+                    print("Row:", Available_row," Seat:", seat "is booked successfully")
+    else:
+        for j in range(20 - Row_remaining, 20):
+            Evening[Available_row][j] = True
+            print("Row:", Available_row," Seat:", j "is booked successfully")
+        for j in range(Require - (20 - Row_remaining)):
+            Available_row += 1
+            Evening[Available_row][j] = True
+            print("Row:", Available_row," Seat:", j "is booked successfully")

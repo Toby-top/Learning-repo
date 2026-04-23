@@ -6,8 +6,10 @@ for i in range(20):
 
 # Count and output the number of booked seats
 Booked = 0
-for True in Evening:
-    Booked += 1
+for row in Evening:
+    for seat in row:
+        if seat == True:
+            Booked += 1
 
 print("Booked seats:", Booked)
 
@@ -19,6 +21,10 @@ Remaining = 20*10 - Booked
 
 while Require < 0:
     Require = int(input("Please enter the number of seats required(>=0):"))
+
 if Require < Remaining:
-    print("Sorry! House full")
-    print("Number of seats left:", 20*10 - Booked)
+    if Remaining == 0:
+        print("House full")
+    else:
+        print("Seats left:", Remaining)
+#else:

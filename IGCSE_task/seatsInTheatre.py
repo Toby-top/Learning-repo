@@ -21,13 +21,13 @@ Remaining = 20*10 - Booked
 while Require < 0:
     Require = int(input("Please enter the number of seats required(>=0):"))
 
-if Require < Remaining:
+Available_row, Row_remaining = divmod(Booked, 20)
+if Require > Remaining:
     if Remaining == 0:
         print("House full")
     else:
         print("Seats left:", Remaining)
 else:
-    Available_row, Row_remaining = divmod(Booked, 20)
     if Require <= Row_remaining:
         for row in Evening:
             for seat in row:

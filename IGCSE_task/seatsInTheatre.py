@@ -1,7 +1,6 @@
 Evening = [[False for _ in range(20)] for _ in range(10)]
 for i in range(20):
     Evening[0][i] = True
-    Evening[1][0],Evening[1][1],Evening[1][2] = True
 # The above code do not need to be written during the exam
 
 # Count and output the number of booked seats

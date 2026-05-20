@@ -32,7 +32,7 @@ else:
         for row in Evening:
             for seat in row:
                 if seat == False:
-                    seat = True
+                    Evening[Available_row][seat] = True
                     print("Row:", Available_row," Seat:", seat, "is booked successfully")
     else:
         for j in range(20 - Row_remaining, 20):

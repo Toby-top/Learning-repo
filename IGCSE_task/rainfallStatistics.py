@@ -15,16 +15,26 @@ TotalNoRainDays = 0
 CountNoRainDays = 0
 LongestNoRainDays = 0 
 
+# for i in range(365):
+#     TotalRainfall += Rainfall[i]
+#     if Rainfall[i] == 0:
+#         TotalNoRainDays += 1
+#         if Rainfall[i - 1] == 0: 
+#             CountNoRainDays += 1
+#         if CountNoRainDays > LongestNoRainDays:
+#             LongestNoRainDays = CountNoRainDays + 1
+#     elif Rainfall[i] != 0:
+#         CountNoRainDays = 0
+
 for i in range(365):
     TotalRainfall += Rainfall[i]
-    if Rainfall[i] == 0:
+    if Rainfall == [0]:
         TotalNoRainDays += 1
-        if Rainfall[i - 1] == 0: 
-            CountNoRainDays += 1
-        if CountNoRainDays > LongestNoRainDays:
-            LongestNoRainDays = CountNoRainDays + 1
-    elif Rainfall[i] != 0:
-        CountNoRainDays = 0
+        if TotalNoRainDays > LongestNoRainDays:
+            LongestNoRainDays = TotalNoRainDays
+    else:
+        TotalNoRainDays = 0
+    # ENDIF
 
 AvgRainfall = TotalRainfall / 365
 AvgRainfall = round(AvgRainfall, 4)

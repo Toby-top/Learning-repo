@@ -7,6 +7,7 @@ Rainfall = [0] * 365
 for i in range(365):
     # Rainfall[i] = int(input("Plz enter the rainfall of the day (mm)"))
     Rainfall[i] = random.randint(0, 24) # No need in exam
+# NEXT i
 
 # Calculate the statistics
 TotalRainfall = 0
@@ -32,9 +33,11 @@ for i in range(365):
         TotalNoRainDays += 1
         if TotalNoRainDays > LongestNoRainDays:
             LongestNoRainDays = TotalNoRainDays
+        # ENDIF
     else:
         TotalNoRainDays = 0
     # ENDIF
+# NEXT i
 
 AvgRainfall = TotalRainfall / 365
 AvgRainfall = round(AvgRainfall, 4)
@@ -53,3 +56,4 @@ if LongestNoRainDays >= 15:
     print("There is drought")
 else:
     print("No drought")
+# ENDIF
